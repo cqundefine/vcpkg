@@ -5,6 +5,7 @@ vcpkg_from_github(
     SHA512 26a03acde7153a6b40b99f00641772433a244c72a3cc4bca6d903cf3b770174d028369a2fb73b2f0774e1124db0e269758eed6d88975347a815e0366c820d247
     PATCHES
         add-openbsd-and-freebsd-to-meson.patch
+	fix-haiku.patch
 )
 
 set(cxx_link_libraries "")

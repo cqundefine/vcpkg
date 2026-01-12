@@ -1,0 +1,12 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0265162..395e659 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -545,6 +545,7 @@ endif()
+ # If we are on Haiku, make sure that the network library is brought in.
+ if(CMAKE_SYSTEM_NAME STREQUAL "Haiku")
+   list(APPEND CURL_LIBS "network")
++  list(APPEND CMAKE_REQUIRED_LIBRARIES "network")
+ elseif(AMIGA)
+   list(APPEND CURL_LIBS "net" "m" "atomic")
+   list(APPEND CMAKE_REQUIRED_LIBRARIES "net" "m" "atomic")

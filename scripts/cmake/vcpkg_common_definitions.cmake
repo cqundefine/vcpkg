@@ -28,6 +28,8 @@ elseif(VCPKG_CMAKE_SYSTEM_NAME STREQUAL "MinGW")
     set(VCPKG_TARGET_IS_MINGW ON)
 elseif(VCPKG_CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
     set(VCPKG_TARGET_IS_EMSCRIPTEN ON)
+elseif(VCPKG_CMAKE_SYSTEM_NAME STREQUAL "Haiku")
+    set(VCPKG_TARGET_IS_HAIKU ON)
 endif()
 
 #Helper variables to identify the host system name
@@ -41,6 +43,8 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "FreeBSD")
     set(VCPKG_HOST_IS_FREEBSD ON)
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "OpenBSD")
     set(VCPKG_HOST_IS_OPENBSD ON)
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Haiku")
+    set(VCPKG_HOST_IS_HAIKU ON)
 endif()
 
 #Helper variable to identify the host path separator.

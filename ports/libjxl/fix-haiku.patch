@@ -1,0 +1,12 @@
+diff -bur libjxl-0.11.1/cmake/FindAtomics.cmake libjxl-0.11.1patch/cmake/FindAtomics.cmake
+--- libjxl-0.11.1/cmake/FindAtomics.cmake	2024-11-26 13:02:35.062652416 +0000
++++ libjxl-0.11.1patch/cmake/FindAtomics.cmake	2025-09-04 17:55:07.189267968 +0000
+@@ -31,7 +31,7 @@
+ 
+ check_cxx_source_compiles("${atomic_code}" ATOMICS_LOCK_FREE_INSTRUCTIONS)
+ 
+-if(ATOMICS_LOCK_FREE_INSTRUCTIONS)
++if(ATOMICS_LOCK_FREE_INSTRUCTIONS OR HAIKU)
+   set(ATOMICS_FOUND TRUE)
+   set(ATOMICS_LIBRARIES)
+ else()

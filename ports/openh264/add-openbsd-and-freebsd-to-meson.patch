@@ -7,7 +7,7 @@ index c604389e..a0dfd219 100644
  deps += [libm_dep]
  
 -if ['linux', 'android', 'ios', 'darwin'].contains(system)
-+if ['linux', 'freebsd', 'openbsd', 'android', 'ios', 'darwin'].contains(system)
++if ['linux', 'freebsd', 'openbsd', 'android', 'ios', 'darwin', 'haiku'].contains(system)
    asm_format32 = 'elf'
    asm_format64 = 'elf64'
    if ['ios', 'darwin'].contains(system)
